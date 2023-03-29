@@ -1,0 +1,15 @@
+:root {
+  --header-height: 5vh;
+}
+
+body {
+  background: #8987ff;
+  height: calc(100vh - var(--header-height));
+}
+
+.header,
+.footer {
+  height: var(--header-height);
+  background: black;
+  color: whitesmoke;
+}
