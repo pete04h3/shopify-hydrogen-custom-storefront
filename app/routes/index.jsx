@@ -1,23 +1,9 @@
-// export const meta = () => {
-//     return {
-//       title: 'Hydrogen',
-//       description: 'A custom storefront powered by Hydrogen',
-//     };
-//   };
-//   export default function Index() {
-//     return (
-//       <div>
-//         <h3>This is a custom storefront, build with Hydrogen</h3>
-//       </div>
-//     );
-//   }
-
 import {useLoaderData, Link} from '@remix-run/react';
 import {Image} from '@shopify/hydrogen';
 export const meta = () => {
   return {
-    title: "Hydrogen",
-    description: "A custom storefront powered by Hydrogen",
+    title: 'Hydrogen',
+    description: 'A custom storefront powered by Hydrogen',
   };
 };
 export async function loader({context}) {
@@ -32,7 +18,7 @@ export default function Index() {
       </h2>
       <div className="grid-flow-row grid gap-2 gap-y-6 md:gap-4 lg:gap-6 grid-cols-1 false  sm:grid-cols-3 false false">
         {collections.nodes.map((collection) => {
-            console.log(collection);
+          console.log(collection);
           return (
             <Link to={`/collections/${collection.handle}`} key={collection.id}>
               <div className="grid gap-4">
